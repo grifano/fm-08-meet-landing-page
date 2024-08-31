@@ -13,7 +13,7 @@ from tech to the best cycling routes.
 
 Happy exploring!
 
-# Project: Testimonials grid section
+# Project: Meet landing page
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges that help to improve
 coding skills by building realistic projects.
@@ -37,10 +37,9 @@ Your users should be able to:
 
 ### Links
 
-- Solution URL:
-  [FrontendMentor Challenge Hub](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7/hub)
+- Solution URL: [FrontendMentor Solution Hub](!ADD LINK!)
 - Live Site URL:
-  [GitHub Pages](https://grifano.github.io/fm-07-testimonials-grid-section/)
+  [GitHub Pages](https://grifano.github.io/fm-08-meet-landing-page/)
 
 ## Author
 

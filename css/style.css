@@ -235,6 +235,35 @@ main {
   }
 }
 @media screen and (min-width: 991px) {
+  .header-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+  }
+  .grid-child {
+    display: flex;
+    margin-bottom: 0;
+    &:first-child {
+      justify-content: left;
+      margin-left: -26px;
+    }
+    &:last-child {
+      margin-right: -26px;
+      display: flex; /*! Check why image is shrinked */
+      justify-content: right;
+    }
+  }
+  .header-avatars {
+    display: block;
+    img {
+      min-width: auto;
+    }
+  }
+  .header-title {
+    font-size: 64px;
+  }
+  .header-subtitle {
+    font-size: 18px;
+  }
   .button {
     transition: background 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     &.is-purple:focus,

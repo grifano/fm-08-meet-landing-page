@@ -20,9 +20,52 @@
     <title>Frontend Mentor | Meet landing page</title>
   </head>
   <body>
-    <header></header>
+    <header class="header">
+      <img
+        class="header-logo"
+        src="./images/logo.svg"
+        width="118"
+        alt="meet logo"
+      />
+      <ul class="header-grid">
+        <li class="grid-child">
+          <picture class="header-avatars">
+            <source
+              media="(min-width: 991px)"
+              srcset="./images/desktop/image-hero-left.png"
+            />
+            <img
+              width="394"
+              src="./images/tablet/image-hero.png"
+              alt="group of peoples avatars"
+            />
+          </picture>
+        </li>
+        <li class="grid-child">
+          <div class="container">
+            <h1 class="header-title">Group Chat for Everyone</h1>
+            <p class="header-subtitle">
+              Meet makes it easy to connect with others face-to-face virtually
+              and collaborate across any device.
+            </p>
+            <div class="header-cta-wrap">
+              <a href="#" class="button is-green">Download <span>v1.3</span></a>
+              <a href="#" class="button is-purple">What is it?</a>
+            </div>
+          </div>
+        </li>
+        <li class="grid-child">
+          <img
+            class="header-avatars"
+            width="394"
+            src="./images/desktop/image-hero-right.png"
+            alt="group of peoples avatars"
+          />
+        </li>
+      </ul>
+    </header>
     <main>
-      <section class="section-testimonials">
+      <section class="section-features">
         <div class="container"></div>
       </section>
     </main>

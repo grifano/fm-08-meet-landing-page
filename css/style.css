@@ -116,11 +116,12 @@ main {
 .container {
   margin: 0 auto;
   max-width: 375px;
-  padding: 0 24px;
+  padding: 0 32px;
 }
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 1148px;
+    max-width: 768px;
+    padding: 0 44px;
   }
 }
 /*** Visually hide element, but keep visible for search engine ***/
@@ -137,9 +138,112 @@ main {
   overflow: hidden;
 }
 
-/*** Page Styles ***/
+/*** Header Styles ***/
+.header {
+  overflow: hidden;
+  padding-top: 48px;
+  text-align: center;
+}
+.header-logo {
+  margin: 0 auto;
+  margin-bottom: 64px;
+}
+.header-grid {
+}
+.header-avatars {
+  display: flex;
+  justify-content: center;
+  img {
+    min-width: 433px;
+  }
+}
+.grid-child {
+  margin-bottom: 24px;
+  &:last-child {
+    display: none;
+  }
+}
+
+.header-title {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 1.1;
+  color: var(--color-slate-900);
+  margin: 0 auto;
+  margin-bottom: 24px;
+  max-width: 10ch;
+}
+.header-subtitle {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-slate-600);
+  margin-bottom: 24px;
+}
+.header-cta-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+.button {
+  font-family: var(--font-family);
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-white);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 29px;
+  padding: 16px 40px;
+  min-height: 56px;
+  span {
+    margin-left: 4px;
+  }
+  &.is-green {
+    span {
+      color: var(--color-cyan-300);
+    }
+    background: var(--color-cyan-600);
+  }
+  &.is-purple {
+    span {
+      color: var(--color-purple-300);
+    }
+    background: var(--color-purple-600);
+  }
+}
 
 @media screen and (min-width: 768px) {
+  .grid-child {
+    margin-bottom: 72px;
+  }
+  .header-avatars {
+    img {
+      min-width: 820px;
+    }
+  }
+  .header-title {
+    font-size: 48px;
+  }
+  .header-subtitle {
+    max-width: 448px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 @media screen and (min-width: 991px) {
+  .button {
+    transition: background 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    &.is-purple:focus,
+    &.is-purple:hover {
+      background-color: #b18bdd;
+    }
+    &.is-green:hover,
+    &.is-green:focus {
+      background-color: #71c0d4;
+    }
+  }
 }

@@ -248,13 +248,16 @@ main {
     }
     &:last-child {
       margin-right: -26px;
-      display: flex; /*! Check why image is shrinked */
+      display: flex;
       justify-content: right;
+      img {
+        flex-shrink: 0;
+      }
     }
   }
   .header-avatars {
     display: block;
-    img {
+    & img {
       min-width: auto;
     }
   }
@@ -273,6 +276,18 @@ main {
     &.is-green:hover,
     &.is-green:focus {
       background-color: #71c0d4;
+    }
+  }
+}
+@media screen and (min-width: 1512px) {
+  .grid-child {
+    &:first-child {
+      justify-content: right;
+      margin-left: none;
+    }
+    &:last-child {
+      margin-right: none;
+      justify-content: left;
     }
   }
 }

@@ -31,12 +31,54 @@
         <li class="grid-child">
           <picture class="header-avatars">
             <source
+              type="image/webp"
               media="(min-width: 991px)"
-              srcset="./images/desktop/image-hero-left.png"
+              srcset="
+                ./images/desktop/faces-left.webp    1x,
+                ./images/desktop/faces-left@2x.webp 2x
+              "
+            />
+            <source
+              media="(min-width: 991px)"
+              srcset="
+                ./images/desktop/faces-left.png    1x,
+                ./images/desktop/faces-left@2x.png 2x
+              "
+            />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              srcset="
+                ./images/tablet/faces.webp    1x,
+                ./images/tablet/faces@2x.webp 2x
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                ./images/tablet/faces.png    1x,
+                ./images/tablet/faces@2x.png 2x
+              "
+            />
+            <source
+              type="image/webp"
+              media="(min-width: 320px)"
+              srcset="
+                ./images/mobile/faces.webp    1x,
+                ./images/mobile/faces@2x.webp 2x
+              "
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="
+                ./images/mobile/faces.png    1x,
+                ./images/mobile/faces@2x.png 2x
+              "
             />
             <img
-              width="394"
-              src="./images/tablet/image-hero.png"
+              width="433"
+              height="160"
+              src="./images/mobile/faces.png"
               alt="group of peoples avatars"
             />
           </picture>
@@ -54,14 +96,7 @@
             </div>
           </div>
         </li>
-        <li class="grid-child">
-          <img
-            class="header-avatars"
-            width="394"
-            src="./images/desktop/image-hero-right.png"
-            alt="group of peoples avatars"
-          />
-        </li>
+        <li class="grid-child" id="grid-last-child"></li>
       </ul>
     </header>
     <main>
@@ -70,5 +105,41 @@
       </section>
     </main>
     <footer></footer>
+
+    <script>
+      // Prevent browser fetching images faces-right image for tablet and mobile
+      function renderRightHeroFaces() {
+        const gridLastChild = document.querySelector('#grid-last-child');
+        gridLastChild.innerHTML = `
+                    <picture class="header-avatars">
+            <source
+              type="image/webp"
+              media="(min-width: 991px)"
+              srcset="
+                ./images/desktop/faces-right.webp    1x,
+                ./images/desktop/faces-right@2x.webp 2x
+              "
+            />
+            <source
+              media="(min-width: 991px)"
+              srcset="
+                ./images/desktop/faces-right.png    1x,
+                ./images/desktop/faces-right@2x.png 2x
+              "
+            />
+            <img
+              width="394"
+              height="303"
+              src="./images/desktop/faces-right.png"
+              alt="group of peoples avatars"
+            />
+          </picture>
+          `;
+      }
+
+      if (window.innerWidth > 991) {
+        renderRightHeroFaces();
+      }
+    </script>
   </body>
 </html>

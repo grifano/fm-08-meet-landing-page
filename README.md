@@ -37,7 +37,7 @@ Your users should be able to:
 
 ### Links
 
-- Solution URL: [FrontendMentor Solution Hub](!ADD LINK!)
+- Solution URL: [FrontendMentor Solution Hub](https://www.frontendmentor.io/solutions/meet-landing-page-using-grid-css-and-smooth-transition-between-section-1d2GXQoll7)
 - Live Site URL:
   [GitHub Pages](https://grifano.github.io/fm-08-meet-landing-page/)
 
